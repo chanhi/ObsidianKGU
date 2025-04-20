@@ -35,7 +35,8 @@
               "title": "중간 정리"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -193,11 +194,11 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "cc2807815f3a314e",
+  "active": "a48db1f8ead12b42",
   "lastOpenFiles": [
-    "무제",
-    "알고리즘/중간 정리.md",
     "알고리즘/6주차.md",
+    "알고리즘/중간 정리.md",
+    "무제",
     "알고리즘/5주차.md",
     "소프트웨어공학/7주차.md",
     "알고리즘/4주차.md",
