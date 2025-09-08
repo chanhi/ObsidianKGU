@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "정보보호개론/10주차.md",
+                "file": "프로세스공학/PE 2주차.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "10주차"
+              "title": "PE 2주차"
             }
           }
         ]
@@ -78,8 +78,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "663b146baca49b4f",
@@ -182,9 +181,17 @@
   },
   "active": "da859e21412c162d",
   "lastOpenFiles": [
+    "프로세스공학/image/Pasted image 20250908161102.png",
+    "Pasted image 20250908161020.png",
+    "프로세스공학/PE 2주차.md",
+    "프로세스공학/image/Pasted image 20250908160554.png",
+    "프로세스공학/image",
+    "프로세스공학/image/Pasted image 20250908160204.png",
+    "정보보호개론/10주차.md",
+    "프로세스공학",
+    "임베디드시스템",
     "DB프로그래밍/4주차.md",
     "DB프로그래밍/5주차.md",
-    "정보보호개론/10주차.md",
     "알고리즘/9주차.md",
     "알고리즘/image/Pasted image 20250502113119.png",
     "알고리즘/image/Pasted image 20250502112928.png",
@@ -198,10 +205,8 @@
     "알고리즘/중간 정리.md",
     "소프트웨어공학/image/Pasted image 20250422110102.png",
     "소프트웨어공학/image/Pasted image 20250422101746.png",
-    "소프트웨어공학/image/Pasted image 20250422093028.png",
     "알고리즘/6주차.md",
     "정보보호개론/7주차.md",
-    "무제",
     "알고리즘/5주차.md",
     "소프트웨어공학/7주차.md",
     "알고리즘/4주차.md",
@@ -210,15 +215,11 @@
     "DB프로그래밍/7주차.md",
     "운영체제/2주차.md",
     "정보보호개론/6주차.md",
-    "정보보호개론/image/Pasted image 20250414161730.png",
     "정보보호개론/5주차.md",
-    "알고리즘/image/Pasted image 20250412140152.png",
     "DB프로그래밍/6주차.md",
     "정보보호개론/HW3.md",
     "소프트웨어공학/6주차.md",
     "소프트웨어공학/5주차.md",
-    "ssf/파이토치.md",
-    "ssf/자료.md",
     "정보보호개론/image",
     "ssf/image",
     "ssf",
