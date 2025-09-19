@@ -1,5 +1,5 @@
 
-
+week2-1
 프로세스 모델: 보이지 않는 프로세스 절차를 가시화 시킨 것
 
 메타데이터: 데이터를 정의하는 데이터
@@ -19,7 +19,11 @@
 4. Case Attributes 어떤 모델(객체)의 속성
 5. Conditions, Phases, and Contents 
 6. Task: Manual, automatic, and semi-automatic tasks :단위 업무
-7. Work-item and activity: case 안에 서의 단위
+7. Work-item and activity: case 안에서의 프로세스를 구성하는 기본 단위에 대한 개념적 용어
+	- block activity
+	- subprocess activity
+	- gateway activity
+	- event activity
 8. Process and Sub-process : 
 9. Routing: Sequential, Parallel, Selective, and Iterative Routing Patterns: flow
 10. Enactment : 모델의 제도를 시행

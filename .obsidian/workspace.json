@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "임베디드시스템/ES 2주차.md",
+                "file": "시스템소프트웨어/시스템SW 3주차.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "ES 2주차"
+              "title": "시스템SW 3주차"
             }
           }
         ]
@@ -183,9 +183,22 @@
   },
   "active": "da859e21412c162d",
   "lastOpenFiles": [
-    "임베디드시스템/Pasted image 20250909094712.png",
-    "프로세스공학/PE 2주차.md",
+    "시스템소프트웨어/image/Pasted image 20250917142434.png",
+    "시스템소프트웨어/시스템SW 2주차.md",
+    "시스템소프트웨어/시스템SW 3주차.md",
+    "임베디드시스템/ES 3주차.md",
     "임베디드시스템/ES 2주차.md",
+    "프로세스공학/PE 3주차.md",
+    "프로세스공학/image/Pasted image 20250915153537.png",
+    "프로세스공학/PE 2주차.md",
+    "프로세스공학/image/Pasted image 20250915144856.png",
+    "프로세스공학/image/Pasted image 20250915150422.png",
+    "시스템소프트웨어/image",
+    "시스템소프트웨어/image/Pasted image 20250910155243.png",
+    "시스템소프트웨어/image/Pasted image 20250910153850.png",
+    "시스템소프트웨어",
+    "임베디드시스템/image",
+    "임베디드시스템/image/Pasted image 20250909094712.png",
     "프로세스공학/image/Pasted image 20250908161102.png",
     "Pasted image 20250908161020.png",
     "프로세스공학/image/Pasted image 20250908160554.png",
@@ -197,17 +210,11 @@
     "DB프로그래밍/4주차.md",
     "DB프로그래밍/5주차.md",
     "알고리즘/9주차.md",
-    "알고리즘/image/Pasted image 20250502113119.png",
-    "알고리즘/image/Pasted image 20250502112928.png",
-    "알고리즘/image/Pasted image 20250502093007.png",
-    "알고리즘/image/Pasted image 20250502092326.png",
-    "알고리즘/image/Pasted image 20250502091834.png",
     "정보보호개론/4주차.md",
     "정보보호개론/3주차.md",
     "정보보호개론/2주차.md",
     "소프트웨어공학/8주차.md",
     "알고리즘/중간 정리.md",
-    "소프트웨어공학/image/Pasted image 20250422110102.png",
     "알고리즘/6주차.md",
     "정보보호개론/7주차.md",
     "알고리즘/5주차.md",
@@ -218,14 +225,9 @@
     "DB프로그래밍/7주차.md",
     "운영체제/2주차.md",
     "정보보호개론/6주차.md",
-    "정보보호개론/5주차.md",
-    "DB프로그래밍/6주차.md",
-    "정보보호개론/HW3.md",
-    "소프트웨어공학/6주차.md",
     "정보보호개론/image",
     "ssf/image",
     "ssf",
-    "소프트웨어공학/image",
-    "정보보호개론"
+    "소프트웨어공학/image"
   ]
 }
