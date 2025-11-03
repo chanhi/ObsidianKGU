@@ -1,0 +1,343 @@
+
+week2-1
+프로세스 모델: 보이지 않는 프로세스 절차를 가시화 시킨 것
+
+메타데이터: 데이터를 정의하는 데이터
+파일 시스템 -> inconfidence 불일치 발생, 같은 대상의 데이터가 불일치 하는 경우 발생 / 데이터 중복성 -> 데이터베이스 사용
+
+워크플로우 & 비즈니스 프로세스
+
+워크플로우 또는 비즈니스 프로세스 (이하 프로세스) 시스템의 성공여부는 프로세스 모델의 품질에 의해 결정 됨
+프로세스 모델의 정의와 분석을 위한 이론적 도구 
+1. 페트리넷 (Petri Net) 기반 프로세스 모델 
+2. 정보제어넷 (Information Control Net) 기반 프로세스 모델 
+
+프로세스 모델 관련 핵심용어의 개념적 이해 
+1. Case (work-case) and Case Type: 모델
+2. Identity: 식별값
+3. State
+4. Case Attributes 어떤 모델(객체)의 속성
+5. Conditions, Phases, and Contents 
+6. Task: Manual, automatic, and semi-automatic tasks :단위 업무
+7. Work-item and activity: case 안에서의 프로세스를 구성하는 기본 단위에 대한 개념적 용어
+	- block activity
+	- subprocess activity
+	- gateway activity
+	- event activity
+8. Process and Sub-process : 
+9. Routing: Sequential, Parallel, Selective, and Iterative Routing Patterns: flow
+10. Enactment : 모델의 제도를 시행
+11. Activity Types 
+12. Role : 수행자자
+13. Performer 
+14. Relevant data 
+15. Transition conditions 
+16. Invoked applications: 작업을 하기 위한 애플리케이션
+
+- 프로세스(Process) : 워크플로우 또는 비즈니스 프로세스 모델의 또 다른 명칭 또는 단축어이다. 프로세스는 액티버티라고 정의되는 단위업무들의 집합과 이들간의 실행순서로 정의된다. 특히, 프로세스들의 집합을 패키지라고 정 의한다. 최종적으로, 정의된 프로세스는 단위업무들의 실행순서로 정의되는 제어흐름과 각 단위업무 의 입출력 데이터들로 정의되는 데이터흐름을 내 포하고 있다. 내포된 제어흐름은 프로세스를 구성하는 단위업무(액티버티) 들에 대한 4가지의 기본적인 제어흐름 유 형 (또는 라우팅 패턴유형), 즉 순차적(Sequential), 선택적 (Disjunctive/Selective), 병렬적(Conjunctive/Parallel), 반복적(Repetitive/Looping/Iterative) 제어흐름 유형들의 조합으로 표현된다. 또한, 이미 정의된 프로세스 또 다른 프로세스 모델의 한 부분으로 활용할 수 있는데, 이를 서브-프로세스(Sub-Process)라고 정의한다. 
+- 액티버티(Activity) : 프로세스를 구성하는 기본 단위업무에 대한 개념적 용어이다. 액티버티의 종류는 작업액티버티(Work Activity), 블럭엑티버티 (Block Activity), 서브프로세스액티버티(Subprocess Activity), 게이트웨이 엑티버티(Gateway Activity), 이벤트액티버티(Event Activity) 등으로 구분 된다. 이들 액티버티들간에는 실행시간의 선후관계(have-precedence)가 존 재하며, 이러한 선후관계는 앞서 소개한 기본적인 제어흐름 유형을 통해 정 의되며, 이는 곧 프로세스의 정의를 의미한 다. 
+- 역할(Role)과 수행자(Actor 또는 Performer) : 역할과 수행자 객체유형은 비 즈니스 프로세스 모델를 위한 조직정보를 정의하는 핵심요소이다. 프로세스 를 구성 하는 작업액티버티들에는 그의 실행을 담당하는 수행자를 할당해야 한다. 그러나 각 일반액티버티에 수행자를 직접 할당할 수도 있지만, 조직 내에서 가장 변화가 많 은 구성요소가 바로 인적요소이기 때문에 이로 인해 비즈니스 프로세스 모델을 너무 자주 변경해야한다는 단점을 갖는다. 따라서 비즈니스 프로세스 모델의 변경을 최소화하고 다양한 유형의 수행자 결정 조건을 효율적으로 활용하고, 수행자 결정의 유연성들을 제공하기 위해서 일반적으로 역할 객체유형을 활용한다. 특히, 역할 객체유형은 조직의 물리 적 구조와 논리적 구조를 반영할 수가 있는데, 조직의 물리적 구조를 역할로 정의할 경우는 조직의 부서 구조를 적용할 수 있으며, 조직의 논 리적 구조를 역할로 정의할 경우는 조직내의 기능적 역할을 역할객체로 적용할 수 있다. 
+- 연관데이터(Relevant Data) : 연관데이터 객체타입은 프로세스 인스턴스의 실행시에 요구되는 각 액티버티의 입출력 데이터를 의미한다. 특히, 연관데이터 객체는 비즈니스 프로세스 모델링 도구의 한 구성요소로서 연관데이터 관리 모듈에 등록되어야 하며, 이 등록된 연관데이터 객체들은 해당 프로세스를 구성하는 액티버티 객 체들의 입출력데이터로 이용될 뿐 만 아니라 프로세스의 제어흐름을 결정짓는 천이조건들도 바로 이 연관데이터를 변수로 정의된다. 그리고 연관데이터 객체의 인스 턴스들은 비즈니스 프로세스 관리 시스템의 실행모듈인 엔진에 의해 관리되며, 엔진과 호출프로그램들과의 연결통로 역할을 하게 된다. 즉, 비즈니스 프로세스 실행 엔진은 일련의 함수나 웹서비스 기술을 이용한 응용에이전트 모듈을 통해 관리하고 있는 연관데이터 객체의 인스턴스 값들을 비즈니스 프로세스 응용영역 즉 호출프 로그램들에게 전달할 수 있는 메커니즘을 제공해야 한다. 
+- 전이조건(Transition Condition) : 프로세스의 제어흐름, 즉 순차적, 선택적, 병렬적, 반복적 제어흐름들에는 액티버티 실행순서를 제어하기 위한 천이조건들을 정 의해야 한다. 이 천이조건들의 변수들은 연관데이터 객체들이며, 비즈니스 프로세스 관리 시스템들마다 약간의 차이는 있겠지만, 다양한 논리연산자들을 제공함으로 써 천이조건을 정의하게 된다. 특히, 프로세스의 제어흐름을 결정하는 천이조건들의 복잡성과 변경가능성이 높은 조직들(예를 들어, 은행이나 보험 등 금융관련기관) 에서는 룰(Rule) 또는 정책을 따로 관리하는 룰 관리 시스템을 운용하고 있어, 일부 기존의 비즈니스 프로세스 관리 시스템들은 소위 룰엔진과의 통합을 제공함으로써 프로세스의 천이조건들을 효율적으로 관리하기도 한다. 
+- 호출프로그램(Invoked Application) : 호출프로그램 객체유형은 해당 액티버티의 물리적 구현을 의미하며, 그 호출프로그램의 종류에 따라서 비즈니스 프로세스 관리 시스템의 특성이 결정되게 된다. 즉, 호출프로그램이 일반 컴퓨터 프로그램이라면 보통 알려진 전통적인 비즈니스 프로세스 관리 시스템이며, 웹서비스라면 웹 서비스 기반 비즈니스 프로세스 관리 시스템, 그리고 트랜잭션이라면 트랜잭션 비즈니스 프로세스 관리 시스템이 되는 것이다. 특히 최근에는 웹서비스 기술이 SOA(Service Oriented Architecture) 개념의 핵심 엔터프라이즈 인프라로 자리잡아 감에 따라 이를 기반으로 하는 비즈니스 프로세스 관리 시스템이 주요 트렌드로 인식되고 있다
+- 케이스(Case) 또는 워크케이스(Workcase)/케이스타입(Case Type) : 워크플로우 또는 비즈니스 프로세스 모델의 실행으로 생성 되고 관리되는 실행 인스턴스를 의미하는 용어이다. 일명 프로세스 인스턴스라고도 정의된다. 예를 들면, 보험처리 프로세스의 가입 자가 요청하는 보험신청서, 주택구입융자처리 프로세스의 융자신청서, 소득 및 납세신고처리 프로세스의 납세신고서 등이 워크플로 우/비즈니스 프로세스 관리 시스템 (이하 시스템)에서는 케이스 또는 워크케이스라는 명칭으로 생성되고 관리되며, 각 케이스는 유일 하게 구별시키는 키값으로서 아이덴터티 (Identity) 값을 시스템으로보터 생성과 함께 할당받는다. 하나의 프로세스 모델로부터 생성 되는 모든 인스턴스들, 즉 케이스(워크케이스)들을 시스템에서는 케이트타입으로 같은 유형으로 분류하고, 그들에 대해서는 동일한 처 리방법을 적용하게 된다.
+	- 상태(State) : 시스템에서 관리되는 워크케이스의 생성과 소멸은 해당 워크케이스의 속성 값들과 이행조건 그리고 콘텐츠를 주요 구성요 소로 표현되는 특정 상태(State)를 기반으로 이루어진다.
+	- 케이스 속성(Case Attributes) : 각 워크케이스는 일정 범위의 연관 변수들을 갖으며, 이러한 연관변수들을 케이스 속성이라고 정의한 다. 이러한 케이스 속성 값들은 시스템이 해당 워크케이스를 관리하는데 활용되고, 또한 유지관리된다. 
+	- 케이스의 이행조건과 이행단계 그리고 내용(Conditions, Phases, and Contents) : 각 워크케이스의 케이스 속성 값으로는 해당 워 크케이스의 실행상황과 처리진도상황을 알 수가 없으므로 시스템에서는 이행조건을 이용하여 각 태스크의 실행여부를 결정하게 된다. 각 워크케이스와 연관되는 태스크들의 실행여부를 결정하는데 있어서 이행조건 뿐 만 아니라 일련의 이행조건 그룹으로 정의되는 하나 이상 의 이행단계를 활용할 수 있다. 또한, 각 워크케이스에 해당하는 태스크의 실제 콘텐츠들은 시스템에 의해서 직접 관리되는 것이 아니라 파일이나 데이터베이스 등에 저장되고 해당 태스크의 응용프로그램에 의해 관리된다. 
+	- 태스크(Task) : 태스크는 워크케이스를 구성하는 업무 또는 작업의 논리적 단위이다. 따라서, 각 태스크는 원소성 특성을 갖는다고 할 수 있다. 즉, 분리될 수 없는 논리 단위로서 모두 실행하거나 전혀안하거나 (Either All or Nothing) 하는 원소성 특성과 함께 롤백(Rollback) 개념으로 유지되어야 한다. (데이터베이스 관리 시스템의 트랜잭션이 유지해야하는 원소성 개념과 같다고 할 수 있다.) 또한, 태스크의 유 형은 수동형(Manual), 자동형(Automatic), 준자동형(Semi-automatic) 태스크 유형으로 구성되며, 수동형 태스크는 어떤 종류의 응용프 로그램없이 한 명 이상의 물리적 수행자들만으로 수행되는 태스크, 자동형 태스크는 사람의 개입없이 완전히 응용프로그램으로만 수행되 는 태스크, 준자동형 태스크는 수행자 뿐 만 아니라 응용프로그램에 의해서 동시에 수행되어야 하는 태스크를 나타낸다.
+- 워크아이템과 액티버티(Work-Item and Activity) : 어느 하나의 프로세스 모델은 일련의 액티버티들과 그들 간의 시간적 실행우선 순위에 의해서 정의되며, 시스템에 의해서 생성되고 관리되는 해당 프로세스 모델의 인스턴스로 정의되는 워크케이스에서는 일련의 워크아이템들과 그들 간의 시간적 실행우선순위에 의해서 정의된다. 따라서, 액티버티는 모델링 측면의 용어이고, 워크아이템은 시스 템의 실행 측면의 용어이다. 또한, 태스크는 해당 워크아이템에 대한 논리적 단위의 작업 또는 업무로서 궁극적으로 수행자 또는 응용 프로그램으로 그 업무가 완성된다.
+
+
+프로세스 모델의 분석 관점
+- 비즈니스 프로세스 메타-모델의 빌드타임 관점 (시스템의 모델링 모듈)
+	- 액티버티를 중심으로 하는 제어흐름구조 관점 
+	- 연관데이터를 중심으로 하는 데이터흐름 관점 
+	- 역할과 수행자를 중심으로 하는 조직 관점 
+	- 천이조건을중심으로하는룰 또는정책관점 
+	- 호출프로그램을 중심으로 하는 응용영역 관점 
+	- 조직부서와 수행자를 중심으로 하는 작업네트워크 및 소셜네트워크 관점 
+	- 프로세스(또는 팩키지)의 변경과 버전을 중심으로 하는 변경이력 관점
+- 비즈니스 프로세스 메타-모델의 런타임 관점 (시스템의 실행 모듈)
+	- 프로세스 인스턴스의 실행상태를 기반으로 하는 모니터링 관점 
+	- 프로세스 인스턴스의 실행이력을 중심으로 하는 이벤트 및 작업 감사 관점 
+	- 프로세스 또는 액티버티의 실행시간을 중심으로 하는 시간성능 관점 
+	- 프로세스 또는 액티버티의 실행 담당자를 중심으로 하는 수행자성능 관점 
+	- 패키지 또는 프로세스의 실행에 따른 KPI(Key Process Indicator) 및 성과분석 관점 
+	- 패키지 또는 프로세스의 실행이력을 중심으로 하는 프로세스 마이닝 또는 재발견 관점
+
+비즈니스 프로세스 모델의 정형적 및 그래픽적 표기법(수학모델)
+- 페트리넷 기반 프로세스 모델링 도구: 고전적인 도구
+	- Work ow Nets: 페트리넷 기반 프로세스 모델
+- 정보제어넷 기반 프로세스 모델링 도구 ICN
+	- 프로세스 (제어흐름) 정의 : 액티버티선후행 함수 / 천이조건선후행 함수 
+	- 연관데이터 (데이터흐름) 정의 : 연관데이터입출력 함수 / 액티버티입출력 함수 
+	- 역할 및 수행자 정의 : 역할할당 함수 / 수행자배정 함수 
+	- 호출프로그램 정의 : 호출프로그램연결 함수
+
+![[Pasted image 20250908160204.png]]
+
+프로세스(제어흐름) 기본유형 4가지
+![[Pasted image 20250908160554.png]]
+- and control flow -> 조건문이 아니라 작업이 두 갈래로 갈리는 분기문
+
+역할 및 수행자 정의: 수행자가 직접 일을 수행하는 경우 관계 변경에 민감해짐 -> 중간에 역할을 둠으로서 같은 역할이 대체할 수 있도록 함
+
+상품주문처리 정보제어넷 모델
+![[Pasted image 20250908161102.png]]
+
+
+프로세스(제어흐름) 정형적 정의
+$\delta_p$ : 이전(previous) activity
+$\delta_s$ : 다음(successor) activity
+$\delta_s(\alpha_A) = {\delta_B, \delta_C}$  And 조건 그래프에서 표현
+
+그래프나 집합의 경우는 컴퓨터가 이해할 수 없으므로 실제 프로그램에서는 행렬을 이용해서 연산
+
+비즈니스 프로세스는 여러 activity로 구성된다
+
+week2-2
+#### 페트리넷 기반 프로세스 모델링 도구
+Petri Nets
+- 동시에 일어나는 이벤트에 효과적
+- 자동 분석하는 툴이 많음
+- 구성
+	- Places: 원형
+	- Transitions: 직선
+	- Directed Arcs
+	- Tokens: 작업의 주체
+	- marking: 토큰의 개수 -> (3, 0)
+	- Enable: input place에 요소가 있다면 해당 transiton이 true
+	- Firing: enable된 place에서 토큰이 output place로 간 것
+	- Firing Sequences: firing 된 순서
+	- Actiive(Token) and Passive Components
+	- Successiveness 연속성
+
+![[Pasted image 20250915150422.png]]
+(P1, P2) = (3, 0)
+(P1, P2, P3, P4, P5) = (3, 0, 0, 0, 0) =transition firing=> (2. 1. 0. 1. 1)
+
+Routing Patterns
+- Sequential routing 
+- Parallel routing 
+- Selective routing 
+- Iterative routing
+
+High-Level Petri Nets
+- Weighted Petri Net: enable이 되는 가중치를 둠
+- Timed Petri Nets: 시간을 조절
+- Hierarchical Petri Nets
+- Colored Petri Nets
+
+#### BPMN principle
+
+Business Process Model and Notation
+구성요소
+- Activities
+	- marker
+	- task types
+	- flow types
+- Gateways
+- Data
+- Event
+- Swimlanes: role마다 영역(Pool)을 나눔
+- Choreographies: 어떤 관계인지 표시
+- Converstions
+
+conformance: 표준을 얼마나 잘 따랐는지 나타내는 지표
+Flow objects: 구성하는 기본 요소, event, activities, gateway
+Artifacts: flow, data
+Connecting objects: sequence flow, message flow, association
+![[Pasted image 20250915153537.png]]
+
+이벤트 시작: 원, 이벤트 끝: 굵은 원, 중간 이벤트: 이중 원
+
+task types
+compensation task: transaction과 같이 취소가 불가능한 activity경우 보상의 느낌으로 새로운 일로 덮어 원래대로 돌리는 개념
+
+event
+blanco event: 빈 원, 이벤트의 원인을 모를 때 비워둔 이벤트
+
+
+
+BPMN
+
+Activities
+- task
+- subprocess
+
+Event
+- start: 얇은 선으로 된 원으로 표현
+- end: 굵은 선으로 된 원으로 표현
+- intermediate
+	- interrupting: 이벤트가 발생한 즉시 프로세스가 멈추고 수행해야 하는 이벤트 ex)update, delete
+	- non-interrupting: 프로세스가 멈출 필요 없이 처리되는 이벤트 ex) read
+
+![[Pasted image 20250922151620.png]]
+
+gateway
+- exclusive: or
+- parallel: and
+- inclusive: or 이거나 and 이거나 상관 없음
+- complex: 한번에 여러 개 이벤트
+
+data
+
+pool 과 pool 사이에는 메세지를 통해서 통신
+
+
+
+#### XML & XPDL
+
+XML(eXtensible Markup Language)
+데이터 자체를 표현하는 문서
+
+```XML
+<note>
+	<to>chan</to>
+	<from>huy</from>
+	<head>note</head>
+	<body>note body</body>
+</note>
+```
+어떠한 기능을 하는 것이 아니라 그저 데이터 자체를 보여주는 문서
+
+모든 것을 단순화시켜야 한다.
+- 데이터 공유, 전송, 플랫폼 변화 등을 단순화
+
+종종 HTML과 상호 보완한다.
+HTML로부터 데이터를 분리한다.
+
+show.html <->data.xml
+
+같은 데이터라도 수많은 xml 포맷이 존재한다.
+
+XML Tree
+xml 트리 구조: root 부터 leaf까지 보통의 트리 구조
+
+문법 구조
+- 반드시 root, 즉 부모 element가 있어야 함
+- xml 프롤로그는 option, 쓴다면 첫 줄(밑 예제 첫 줄)
+- 클로징 태그 항상 필요, 오픈 태그와 항상 같아야 됨(properly nesting)
+  ```XML
+	<?xml version="1.0" encoding="UTF-8"?>
+	<root>
+		<child>
+			...
+		</child>
+	</root>
+	<!-- 주석 -->
+	```
+
+&lt;  =  < 
+&gt;  = >
+&amp;  =  &
+&apos;  =  '
+&quot;  = "
+- xml은 공백, 엔터 등을 값으로 침
+
+attribute
+```
+<tag 속성명="값"> </tag>
+```
+
+이름이 충돌이 나면 안됨(루트 태그 이름)
+
+XMLHttpRequest Object
+
+XML Parser: 가져온 텍스트나 파일을 xml형태로 파싱하는 것
+```
+parser = new DOMParser();
+xmlDoc = parser.parseFromString(text, "text/xml");
+```
+
+
+#### 비즈니스 프로세스 모델 분석
+STRUCTURE ANALYSIS TECHNIQUES 
+A. STRUCTURAL CORRECTNESS ANALYSIS 
+B. STRUCTURAL SAFENESS ANALYSIS
+
+DYNAMIC ANALYSIS TECHNIQUES
+A. ACTIVITY FIRING SEQUENCING RULES 
+B. REACHABILITY ANALYSIS
+
+PERFORMANCE ANALYSIS TECHNIQUES
+A. SIMULATION-DRIVEN PERFORMANCE ANALYSIS 
+B. HUMAN RESOURCE CAPABILITY PLANNING ANALYSIS
+
+ORGANIZATIONAL BEHAVIORAL ANALYSIS TECHNIQUES 
+A. AFFILIATION NETWORK ANALYSIS 
+B. SOCIAL NETWORK ANALYSIS 
+C. WORK TRANSFERENCE NETWORK ANALYSIS
+
+
+STRUCTURAL CORRECTNESS ANALYSIS USING THE RULES
+두 가지 구조를 만족해야 함
+- SPLIT-GATEWAY ANOMAL
+![[Pasted image 20251013143604.png]]
+- JOIN-GATEWAY ANOMALY
+![[Pasted image 20251013143436.png]]
+
+![[Pasted image 20251013143827.png]]
+
+STRUCTURAL SAFENESS ANALYSIS 
+The essential requirement on modeling business process models
+SOUND & SAFE CONTROL-FLOW STRUCTURE
+비즈니스 프로세스 모델은 불필요한 단위업무-액티버티를 포함하고 있지 않아야 하며, 그로부터 생성되는 모든 워크케이스는 반드시 그 의 실행을 완전하고 성공적으로 완료되어야 하고, 실행이 종료된 후에는 해당 워크케이스의 실행상태를 나타내는 색깔-토큰들이 더 이 상의 존재하지 않아야 한다.
+
+VERIFICATION OF SOUND & SAFE CONTROL-FLOW STRUCTURE
+입증하기 위해서는 합리적 대체 속성 조건에 맞게 단계적으로 대체하면서 입증한다.
+- 합리적 대체 속성: 조건 어느 한 단위업무-액티버티를 합리적/안전적 제어구조의 정보제어넷 모델로 대체하면, 그 결과의 정보제어넷 모델 역시 합리적/ 안전적 제어구조를 갖는다.
+
+BUILDING-BLOCKS OF INFORMATION CONTROL NET
+- 기본적으로 safe한 sound&safe structures
+![[Pasted image 20251013144512.png]]
+
+
+REACHABILITY ANALYSIS(도달 가능성 분석)
+정보제어넷 비즈니스 프로세스 모델의 동적 분석요소인 색깔-토큰 및 그의 점화순서 개념을 융합하여 해당 프로세스를 구성하는 단위업무-액티버티들의 실행순서를 도달가능성 그래프 모델로 표현하는 동적 분석방법으로서 비즈니스 프로세스 모델링 오류 상황 분석 및 인 지 기법의 하나이다.
+
+
+Performance analysis
+마르코프 분석
+대기행렬이론, 큐잉이론
+
+MeanValueAnalysis: 1000명의 사용자가 사용할 때의 퍼포먼스를 분석하기 위해 1000까지 가는 과정을 워밍업이라 하고 1000명이 됐을 때부터 측정을 시작
+
+
+비즈니스 프로세스의 모델링 제어구조와 자원할당정책에 따른 성능분석 및 비교 
+A. Sequential 
+(프로세스 모델링 상황 1) 단위업무-액티버티를 처리하기 위한 인적자원의 운용방법이 매우 경직되어 있는 상황으로서, 오직 하나의 단위업무- 액티버티를 처리하는데 두 명의 인적자원을 전적으로 할당한 정보제어넷 프로세스 모델 
+B. Parallel 
+(프로세스 모델링 상황 2) 비즈니스 프로세스 모델을 개발하는데 있어서 일반적으로 참고하는 가이드라 인들 중의 하나로 가능한 최대한으로 단위업무-액티버티들을 병렬로 구성하라는 점 을 상기할 필요가 있다. 이러한 가이드라인에 따라 순차적 제어구조의 단위업무-액티버티들을 병렬게이트웨이-액티버티를 이용한 병렬적 제어구조로 구성한 정보제어넷 프로세스 모델 
+C. Composition 
+(프로세스 모델링 상황 3) 때로는 두 개의 단위업무-액티버티들을 한 개의 존 더 큰 범위의 단위업무-액티버티로 결합시켜 처리하는 것이 더 우수한 효과를 보는 경우가 있다. 이러한 상황을 반영한 정보제어넷 프로세스 모델 
+D. Flexibilization 
+(프로세스 모델링 상황 4) 인적자원의 유연성에 대한 긍정적인 영향을 설명하기 위하여, 순차적 단위업무-액티버티에서 인적자원들을 특정 단위업무-액티버티에 배정하지 않고 두 개의 단 위업무-액티버터를 모두를 처리할 수 있도록 유연성을 제공한 정보제어넷 프로세스 모델 
+E. Triage 
+(프로세스 모델링 상황 5) 자원의 선별적 분배원칙(triage)로서 워크케이스의 유형을 수월(easy)-워크케이스와 난해(hard)-워크케이스로 구분한 정보제어넷 프로세스 모델 
+F. Prioritization 
+(프로세스 모델링 상황 6) 각 단위업무-액티버티의 처리에 있어서 수월-워크케이스에게 난해-워크케이스보다 우선적인 처리 기회를 제공한 정보제어넷 프로세스 모델
+
+성능 분석
+
+성능 분석 결과
+
+
+CAPABILITY PLANNING & ANALYSIS OF BUSINESS PROCESS MODELS
+비즈니스 프로세스 모델의 예측수용성 계획 및 분석의 정의
+
+예측수용성 계획 정의: 예측수용성 계획의 의미는 어느 인적자원들을 또는 무슨 인적자원의 분류유형들을 각 단위 기간에 어떻게 배정할 것인가를 계획하는 것
+
+
+
+비즈니스 프로세스 모델의 조직행동형태 분석의 정의
+조직행동형태 모델 유형
+- 소속성 네트워크 모델: 사람과 이벤트 간의 관계
+- 사회성 네트워크 모델: 사람끼리 관계
+
+
+pull-업무협력, push-업무협력
+
+소시오 행렬: 생성된 생성된 업무-사회성 네트워크 모델을 대상으로 다양한 유형의 전통적인 소셜네트워크 분석기법을 적용하기 위해서는 해당 업무-사회성 네트워크 모델을 행렬형태 로 표현
+
+업무 수행자의 소셜구심도 -> 높을수록 관계된 것이 많음

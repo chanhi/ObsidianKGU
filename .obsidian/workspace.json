@@ -8,17 +8,17 @@
         "type": "tabs",
         "children": [
           {
-            "id": "da859e21412c162d",
+            "id": "c346e72a3ae85aa1",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "시스템소프트웨어/시스템SW 3주차.md",
+                "file": "프로세스공학/PE 10주차.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "시스템SW 3주차"
+              "title": "PE 10주차"
             }
           }
         ]
@@ -78,8 +78,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "663b146baca49b4f",
@@ -181,29 +180,38 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "da859e21412c162d",
+  "active": "c346e72a3ae85aa1",
   "lastOpenFiles": [
-    "시스템소프트웨어/image/Pasted image 20250917142434.png",
-    "시스템소프트웨어/시스템SW 2주차.md",
+    "프로세스공학/PE 9주차.md",
+    "프로세스공학/PE 10주차.md",
+    "프로세스공학/PE 중간 정리.md",
+    "프로세스공학/PE 7주차.md",
+    "프로세스공학/PE 6주차.md",
+    "프로세스공학/PE 5주차.md",
+    "프로세스공학/PE 4주차.md",
+    "프로세스공학/PE 3주차.md",
+    "프로세스공학/PE 2주차.md",
+    "시스템소프트웨어/시스템SW 5주차.md",
+    "시스템소프트웨어/SS 중간정리.md",
+    "시스템소프트웨어/image/Pasted image 20251021112638.png",
+    "시스템소프트웨어/시스템SW 4주차.md",
     "시스템소프트웨어/시스템SW 3주차.md",
+    "시스템소프트웨어/시스템SW 2주차.md",
+    "프로세스공학/image/Pasted image 20251013144512.png",
+    "프로세스공학/image/Pasted image 20251013143827.png",
+    "프로세스공학/image/Pasted image 20251013143604.png",
+    "프로세스공학/image/Pasted image 20251013143436.png",
+    "프로세스공학/image/Pasted image 20251013143349.png",
+    "시스템소프트웨어/image/Pasted image 20251006200242.png",
     "임베디드시스템/ES 3주차.md",
     "임베디드시스템/ES 2주차.md",
-    "프로세스공학/PE 3주차.md",
+    "프로세스공학/image/Pasted image 20250922151620.png",
+    "시스템소프트웨어/image/Pasted image 20250917142434.png",
     "프로세스공학/image/Pasted image 20250915153537.png",
-    "프로세스공학/PE 2주차.md",
-    "프로세스공학/image/Pasted image 20250915144856.png",
-    "프로세스공학/image/Pasted image 20250915150422.png",
     "시스템소프트웨어/image",
-    "시스템소프트웨어/image/Pasted image 20250910155243.png",
-    "시스템소프트웨어/image/Pasted image 20250910153850.png",
     "시스템소프트웨어",
     "임베디드시스템/image",
-    "임베디드시스템/image/Pasted image 20250909094712.png",
-    "프로세스공학/image/Pasted image 20250908161102.png",
-    "Pasted image 20250908161020.png",
-    "프로세스공학/image/Pasted image 20250908160554.png",
     "프로세스공학/image",
-    "프로세스공학/image/Pasted image 20250908160204.png",
     "정보보호개론/10주차.md",
     "프로세스공학",
     "임베디드시스템",
@@ -216,15 +224,6 @@
     "소프트웨어공학/8주차.md",
     "알고리즘/중간 정리.md",
     "알고리즘/6주차.md",
-    "정보보호개론/7주차.md",
-    "알고리즘/5주차.md",
-    "소프트웨어공학/7주차.md",
-    "알고리즘/4주차.md",
-    "알고리즘/3주차.md",
-    "알고리즘/2주차.md",
-    "DB프로그래밍/7주차.md",
-    "운영체제/2주차.md",
-    "정보보호개론/6주차.md",
     "정보보호개론/image",
     "ssf/image",
     "ssf",
